@@ -1,17 +1,18 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+
+  before :each do
+    @user = User.new(
+      first_name: 'Amanda',
+      last_name: 'Tuyen',
+      email: 'amanda@email.com',
+      password: 'amanda',
+      password_confirmation: 'amanda'
+    )
+  end
+
   describe 'Validations' do
-    
-    before :each do
-      @user = User.new(
-        first_name: 'Amanda',
-        last_name: 'Tuyen',
-        email: 'amanda@email.com',
-        password: 'amanda',
-        password_confirmation: 'amanda'
-      )
-    end
 
     it 'is valid with all fields present and password matches password confirmation' do
       expect(@user).to be_valid
@@ -91,4 +92,35 @@ RSpec.describe User, type: :model do
       expect(@user.errors.full_messages[0]).to eq("Email has already been taken")
     end
   end
+
+  describe '.authenticate_with_credentials' do
+    
+    it 'returns and instance of the user if authentication is successful' do
+      @user.save
+      
+      expect(User.authenticate_with_credentials("amanda@email.com", "amanda")).to eq(@user)
+    end
+
+    it 'returns nil if authentication is unsuccessful due to incorrect password' do
+      @user.save
+
+      expect(User.authenticate_with_credentials("amanda@email.com", "wrong")).to eq(nil)
+    end
+
+    it 'still authenticates user if they have spaces before or after email address' do
+      @user.save
+
+      expect(User.authenticate_with_credentials("  amanda@email.com  ", "amanda")).to eq(@user)
+    end
+
+    it 'username is not case-sensitive, will still authenticate' do
+      @user.save
+
+      expect(User.authenticate_with_credentials("AMANDA@email.com", "amanda")).to eq(@user)
+    end
+
+  end
+
+
+
 end
