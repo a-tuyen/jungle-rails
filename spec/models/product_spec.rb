@@ -14,11 +14,11 @@ RSpec.describe Product, type: :model do
       )
     end
 
-    it 'is valid with all fields present' do
+   xit 'is valid with all fields present' do
       expect(@product).to be_valid
     end
 
-    it 'is invalid if name is not present' do
+    xit 'is invalid if name is not present' do
       @product.name = nil
       @product.save
 
@@ -26,7 +26,7 @@ RSpec.describe Product, type: :model do
       expect(@product.errors.full_messages[0]).to eq("Name can't be blank")
     end
 
-    it 'is invalid if price is not present' do
+    xit 'is invalid if price is not present' do
       @product.price_cents = nil
       @product.save
 
@@ -34,7 +34,7 @@ RSpec.describe Product, type: :model do
       expect(@product.errors.full_messages[0]).to eq("Price cents is not a number")
     end
 
-    it 'is invalid if quantity is not present' do
+    xit 'is invalid if quantity is not present' do
       @product.quantity = nil
       @product.save
 
@@ -42,7 +42,7 @@ RSpec.describe Product, type: :model do
       expect(@product.errors.full_messages[0]).to eq("Quantity can't be blank")
     end
 
-    it 'is invalid if cateogory is not present' do
+    xit 'is invalid if cateogory is not present' do
       @product.category = nil
       @product.save
 
