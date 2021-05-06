@@ -1,7 +1,7 @@
 class Admin::CategoriesController < ApplicationController
 
   http_basic_authenticate_with name: ENV["ADMIN_USERNAME"], password: ENV["ADMIN_PASSWORD"]
-  # http_basic_authenticate_with name: "jungle", password: "book"
+  
 
   def index
     @categories = Category.order(id: :desc).all
