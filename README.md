@@ -1,8 +1,10 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. 
 
-The purpose of this project was to simulate an on the job web dev environment. I inherited this incomplete WebApp and fixed formatting issues, implemented new features and implemented user and admin authentication. To further improve this WebApp, I implemented testing with Rspec, Capybara and Poltergeist.
+A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. Users can view products for sale, add them to their cart and view items in their cart and complete their purchase. Users can choose to register and login and have the items in their cart saved for them. Admin users require authentication and can edit the products page and create new product categories as needed. 
+
+The purpose of this project was to simulate an on the job Web Developer environment. I inherited this incomplete WebApp and fixed formatting issues, implemented new features and implemented user and admin authentication. To further improve this WebApp, I implemented testing with Rspec, Capybara and Poltergeist.
+
 
 !["Screenshot of Homepage"](https://github.com/a-tuyen/jungle-rails/blob/master/docs/Jungle%20-%20Products.png?raw=true)
 !["Screenshot of Product Detail Page"](https://github.com/a-tuyen/jungle-rails/blob/master/docs/Jungle%20-%20ProdDesc.png?raw=true)
