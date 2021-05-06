@@ -1,6 +1,19 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. 
+
+The purpose of this project was to simulate an on the job web dev environment. I inherited this incomplete WebApp and fixed formatting issues, implemented new features and implemented user and admin authentication. To further improve this WebApp, I implemented testing with Rspec, Capybara and Poltergeist.
+
+!["Screenshot of Homepage"](https://github.com/a-tuyen/jungle-rails/blob/master/docs/Jungle%20-%20Products.png?raw=true)
+!["Screenshot of Product Detail Page"](https://github.com/a-tuyen/jungle-rails/blob/master/docs/Jungle%20-%20ProdDesc.png?raw=true)
+!["Screenshot of Admin Authentication"](https://github.com/a-tuyen/jungle-rails/blob/master/docs/Jungle%20-%20AdminAuth.png?raw=true)
+
+## Dependencies
+
+* Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
+* PostgreSQL 9.x
+* Stripe
+
 
 ## Additional Steps for Apple M1 Machines
 
@@ -26,8 +39,4 @@ Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
-## Dependencies
 
-* Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
-* PostgreSQL 9.x
-* Stripe
